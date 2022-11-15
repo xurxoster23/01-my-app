@@ -1,0 +1,25 @@
+<p>Nombre Empleado: {{nombre}}</p>
+<p>Apellido Empleado: {{apellido}}</p>
+<p>Edad Empleado: {{edad>=18 ? "Mayor de Edad":edad}}</p>
+<p>Empresa Empleado: {{empresa}}</p>
+
+<hr/>
+<!-- Realización de Event Binding -->
+Introduce la Empresa:
+<!-- <input type="text" #empresa  (keyup)="0" [disabled]="desactivacionCuadro" /> -->
+
+<!-- Two Way Binding (Banana in Box)-->
+<input type="text" [(ngModel)] = "empresa">
+
+<hr>
+{{textoRegistro}}
+<br/>
+Registrado: <input type="radio" name="nRegistro" value="Si" id="01-radio" [checked]="usoRegistrado" (click)="setUsuarioRegistrado($event)"/>
+No Registrado: <input type="radio" name="nRegistro" value = "No" id="02-radio" (click)="setUsuarioRegistrado($event)"/>
+
+{{getRegistroUsuario()}}
+
+<br/>
+<br/>
+
+<!-- <input  type="button" value="Dale!""> -->
